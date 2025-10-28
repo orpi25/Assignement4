@@ -20,15 +20,15 @@ void main() {
         String? task = stdin.readLineSync();
         if (task != null && task.isNotEmpty) {
           tasks.add(task);
-          print('✅ Task added successfully!');
+          print('Task added successfully!');
         } else {
-          print('⚠️ Task cannot be empty.');
+          print('Task cannot be empty.');
         }
         break;
 
       case '2':
         
-        print('\n📋 Your To-Do List:');
+        print('\n Your To-Do List:');
         if (tasks.isEmpty) {
           print('No tasks available.');
         } else {
@@ -41,7 +41,7 @@ void main() {
       case '3':
         
         if (tasks.isEmpty) {
-          print('⚠️ No tasks to remove.');
+          print(' No tasks to remove.');
         } else {
           stdout.write('Enter the task number to remove: ');
           int index = int.parse(stdin.readLineSync()!);
@@ -49,19 +49,19 @@ void main() {
             print('🗑️ Removed: ${tasks[index - 1]}');
             tasks.removeAt(index - 1);
           } else {
-            print('⚠️ Invalid task number.');
+            print('Invalid task number.');
           }
         }
         break;
 
       case '4':
         
-        print('👋 Exiting the app. Goodbye!');
+        print('Exiting the app. Goodbye!');
         running = false;
         break;
 
       default:
-        print('⚠️ Invalid option. Please choose between 1-4.');
+        print(' Invalid option. Please choose between 1-4.');
     }
   }
 }
